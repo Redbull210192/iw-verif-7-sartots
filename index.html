@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Les 7 Sartots · Gîtes avec piscine face aux Alpes · Saint-Pierre-d'Albigny, Savoie</title>
+<meta name="description" content="Trois sartôts de vignerons rénovés en gîtes de charme, une piscine plein sud face aux Alpes, aux portes du massif des Bauges, entre Chambéry, Annecy et Albertville.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14211f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les 7 Sartots · Gîtes avec piscine face aux Alpes">
+<meta property="og:description" content="Trois sartôts de vignerons rénovés, une piscine plein sud face aux Alpes, le calme des Bauges.">
+<meta property="og:url" content="https://les-7-sartots.immerweb.com/">
+<meta property="og:image" content="https://les-7-sartots.immerweb.com/img/piscine.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Les 7 Sartots","url":"https://les-7-sartots.immerweb.com/","image":"https://les-7-sartots.immerweb.com/img/piscine.jpg","telephone":"+33 6 51 59 32 98","email":"les7sartots@gmail.com","address":{"@type":"PostalAddress","streetAddress":"2230 route du Col du Frêne, La Plantaz","postalCode":"73250","addressLocality":"Saint-Pierre-d'Albigny","addressCountry":"FR"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Piscine","value":true}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..500&family=Instrument+Sans:wght@400..600&display=swap">
+<link rel="preload" as="image" href="hero/frames/f_0001.jpg" media="(orientation:landscape)" fetchpriority="high">
+<link rel="preload" as="image" href="hero/frames-m/f_0001.jpg" media="(orientation:portrait)" fetchpriority="high">
+<style>
+:root{
+  --papier:#f4f1ea;--papier2:#e9e3d7;--encre:#1b2321;--accent:#2d6a74;--chaux:#c9b28d;
+  --profond:#14211f;--nuit:#0e1514;--clair:#a9d3d8;--brume:#c8cfca;--soleil:#e8c35a;
+  --f-titre:'Fraunces',Georgia,serif;--f-texte:'Instrument Sans',system-ui,sans-serif;
+  --g:max(20px,env(safe-area-inset-left,0px));--gd:max(20px,env(safe-area-inset-right,0px));
+  --bas:calc(22px + env(safe-area-inset-bottom,0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--f-texte);font-size:16px;line-height:1.6;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{padding-left:var(--g);padding-right:var(--gd)}
+h1,h2,h3{font-family:var(--f-titre);font-weight:360;letter-spacing:-.025em;font-variation-settings:'opsz' 144;line-height:.95;margin:0}
+h2 em,h1 em{font-style:italic;font-weight:300;letter-spacing:-.01em}
+.sur{font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px;opacity:.75}
+
+/* bandeau aperçu */
+.apercu{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:rgba(14,21,20,.78);color:#fff;font-size:11px;letter-spacing:.08em;padding:7px 14px;border-radius:999px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);white-space:nowrap;pointer-events:none}
+
+/* en-tête */
+header.haut{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(16px + env(safe-area-inset-top,0px)) var(--gd) 16px var(--g);color:#fff;mix-blend-mode:difference;pointer-events:none}
+header.haut a{pointer-events:auto;text-decoration:none}
+.marque{font-family:var(--f-titre);font-size:20px;letter-spacing:.01em;white-space:nowrap}
+.marque b{font-weight:500;font-style:italic}
+header.haut nav{display:flex;gap:24px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;align-items:center}
+header.haut .cta{border:1px solid #fff;border-radius:999px;padding:8px 14px}
+@media (max-width:760px){header.haut nav a:not(.cta){display:none}}
+
+/* film au défilement */
+.hero{height:620vh;position:relative;background:var(--nuit)}
+.hero .scene{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero .affiche,.hero canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero canvas{opacity:0;transition:opacity .5s ease}
+.hero canvas.pret{opacity:1}
+.hero .voile{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 24%,rgba(0,0,0,0) 50%,rgba(0,0,0,.62) 100%)}
+.hero h1{position:absolute;left:var(--g);right:var(--gd);bottom:calc(var(--bas) + 110px);color:#fff;font-size:min(15vw,190px);text-shadow:0 4px 40px rgba(0,0,0,.35)}
+.hero h1 .ln{display:block;overflow:hidden;padding:.04em 0 .1em;margin-bottom:-.1em}
+.hero h1 .ch{display:inline-block}
+.hero .surt{position:absolute;left:var(--g);top:calc(80px + env(safe-area-inset-top,0px));color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.5);max-width:80vw}
+.hero .intro{position:absolute;left:var(--g);right:var(--gd);bottom:calc(var(--bas) + 44px);color:#fff;max-width:46ch;font-size:17px;line-height:1.5;text-shadow:0 1px 14px rgba(0,0,0,.6);margin:0}
+.hero .indice{position:absolute;right:var(--gd);bottom:calc(var(--bas) + 44px);color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.hero .indice i{display:block;width:1px;height:44px;background:#fff;transform-origin:top;animation:indice 1.8s ease-in-out infinite}
+.hero .surt,.hero .intro,.hero .indice{animation:monte 1s .7s both ease-out}
+@keyframes monte{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@keyframes indice{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+.chap{position:absolute;left:var(--g);right:var(--gd);bottom:calc(var(--bas) + 70px);color:#fff;opacity:0;pointer-events:none;will-change:opacity,transform}
+.chap .n{font-family:var(--f-titre);font-style:italic;font-size:15px;opacity:.85;margin:0 0 8px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.chap h2{font-size:clamp(40px,7vw,104px);text-shadow:0 4px 40px rgba(0,0,0,.4)}
+.chap p{margin:14px 0 0;max-width:40ch;font-size:16px;line-height:1.5;text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.hero .fin{position:absolute;left:var(--g);right:var(--gd);bottom:calc(var(--bas) + 70px);color:#fff;opacity:0;visibility:hidden}
+.hero .fin h2{font-size:clamp(46px,8.5vw,136px);text-shadow:0 4px 40px rgba(0,0,0,.35);margin-bottom:26px}
+.bouton{display:inline-flex;align-items:center;gap:12px;background:var(--papier);color:var(--profond);text-decoration:none;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:14px;padding:17px 28px;border-radius:999px;transition:transform .3s,background .3s}
+.bouton:hover{transform:translateY(-2px);background:#fff}
+.bouton.plein{background:var(--accent);color:#fff}
+.bouton.plein:hover{background:#245a63}
+.hero .barre{position:absolute;right:var(--gd);bottom:calc(var(--bas) + 20px);width:110px;height:2px;background:rgba(255,255,255,.28);overflow:hidden;border-radius:2px}
+.hero .barre i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+@media (max-width:700px){.hero .indice{display:none}.hero h1{bottom:calc(var(--bas) + 150px)}.hero .intro{font-size:15px;bottom:calc(var(--bas) + 50px)}}
+
+/* bienvenue */
+.bienvenue{padding-block:clamp(90px,13vw,180px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.bienvenue h2{font-size:clamp(46px,7vw,112px);margin-bottom:30px;color:var(--accent)}
+.lead{font-family:var(--f-titre);font-style:italic;font-weight:300;font-size:clamp(24px,2.8vw,40px);line-height:1.2;margin:0;text-wrap:pretty}
+.lead .mot{display:inline-block;opacity:.12}
+.chiffres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:46px;border-top:1px solid rgba(27,35,33,.2);padding-top:22px}
+.chiffres b{display:block;font-family:var(--f-titre);font-weight:360;font-size:clamp(30px,3.4vw,48px);line-height:1;color:var(--accent)}
+.chiffres span{font-size:13px;line-height:1.35;display:block;margin-top:8px;opacity:.8}
+@media (max-width:700px){.chiffres{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}}
+.duo{position:relative;height:clamp(440px,52vw,720px)}
+.duo figure{position:absolute;margin:0;overflow:hidden;background:var(--papier2)}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+.duo .a{top:0;left:0;width:74%;height:72%}
+.duo .b{bottom:0;right:0;width:54%;height:50%;border:8px solid var(--papier)}
+@media (max-width:860px){.bienvenue{grid-template-columns:1fr}.duo{height:min(118vw,560px)}}
+
+/* la fenêtre s'ouvre sur les Alpes */
+.fenetre{height:280vh;position:relative;background:var(--papier)}
+.fenetre .scene{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center}
+.fenetre .cadre{position:absolute;inset:0;clip-path:inset(18% 24% 18% 24% round 6px);will-change:clip-path}
+.fenetre .cadre img{width:100%;height:100%;object-fit:cover;transform:scale(1.25);will-change:transform}
+.fenetre .cadre::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 50%,rgba(0,0,0,.5),rgba(0,0,0,.2))}
+.fenetre .txt{position:relative;z-index:2;color:#fff;text-align:center;padding-inline:var(--g);max-width:980px}
+.fenetre h2{font-size:clamp(40px,7.6vw,128px);text-shadow:0 2px 40px rgba(0,0,0,.45)}
+.fenetre p{margin:22px auto 0;max-width:44ch;font-size:clamp(16px,1.3vw,19px);text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.massifs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.massifs span{border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:6px 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(4px)}
+@media (max-width:700px){.fenetre .cadre{clip-path:inset(24% 8% 24% 8% round 6px)}}
+
+/* les gîtes */
+.gites{background:var(--papier2)}
+.gites .tete{padding-block:clamp(84px,10vw,130px) 30px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.gites h2{font-size:clamp(48px,7.5vw,124px)}
+.gites h2 em{color:var(--accent)}
+.gites .tete p{max-width:40ch;margin:0;font-size:17px}
+.defile{position:relative}
+.defile .scene{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;align-items:center}
+.piste{display:flex;gap:clamp(18px,2.4vw,36px);padding-left:var(--g);padding-right:var(--gd);will-change:transform}
+.carte{flex:0 0 min(64vw,640px);display:grid;gap:14px;align-content:start}
+.carte .photos{display:grid;grid-template-columns:2fr 1fr;gap:8px;aspect-ratio:16/9}
+.carte figure{margin:0;overflow:hidden;background:var(--papier)}
+.carte .photos figure:first-child{grid-row:span 2}
+.carte figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.carte:hover figure img{transform:scale(1.04)}
+.carte .ligne{border-top:1px solid var(--encre);padding-top:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.carte h3{font-size:clamp(28px,3vw,44px);line-height:1}
+.carte .num{font-style:italic;font-size:.55em;opacity:.55;margin-right:.35em}
+.carte .tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.carte p{margin:0;font-size:16px;line-height:1.6;max-width:54ch}
+.carte ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.carte li{font-size:12px;background:var(--papier);border-radius:999px;padding:4px 11px}
+@media (max-width:760px){
+  .defile{height:auto!important}.defile .scene{position:static;height:auto;display:block}
+  .piste{flex-direction:column;transform:none!important;gap:56px;padding-bottom:90px}.carte{flex:none}
+}
+
+/* sections photo + texte */
+.espe{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,5vw,84px);align-items:center;padding-block:clamp(84px,10vw,150px)}
+.espe.inv{grid-template-columns:minmax(0,7fr) minmax(0,5fr);background:var(--papier2)}
+.espe.inv .espe-txt{order:2}
+.espe h2{font-size:clamp(44px,6.4vw,104px);color:var(--accent);margin-bottom:24px}
+.espe-lead{font-family:var(--f-titre);font-style:italic;font-weight:300;font-size:clamp(22px,2.3vw,32px);line-height:1.25;margin:0 0 18px;text-wrap:pretty}
+.espe-p{font-size:clamp(16px,1.2vw,18px);line-height:1.65;margin:0 0 26px;max-width:46ch}
+.espe-img{display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.2vw,16px)}
+.espe-img figure{margin:0;overflow:hidden;background:var(--papier2)}
+.espe-img .g{grid-column:1/-1;aspect-ratio:16/10}
+.espe-img .p{aspect-ratio:4/3}
+.espe-img img{width:100%;height:110%;object-fit:cover;display:block;will-change:transform}
+@media (max-width:860px){.espe,.espe.inv{grid-template-columns:1fr}.espe.inv .espe-txt{order:0}}
+
+/* piscine plein écran */
+.bassin{height:240vh;position:relative;background:var(--nuit)}
+.bassin .scene{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.bassin .img{position:absolute;inset:0;will-change:transform}
+.bassin .img img{width:100%;height:100%;object-fit:cover}
+.bassin .scene::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(0,0,0,.66),rgba(0,0,0,0) 55%)}
+.bassin .cap{position:absolute;z-index:2;left:var(--g);right:var(--gd);bottom:calc(var(--bas) + 50px);color:#fff}
+.bassin h2{font-size:clamp(50px,10vw,170px);text-shadow:0 2px 40px rgba(0,0,0,.4)}
+.bassin h2 em{color:var(--clair)}
+.bassin .cap p{max-width:46ch;margin:20px 0 0;font-size:clamp(16px,1.25vw,19px);text-shadow:0 1px 12px rgba(0,0,0,.7)}
+
+/* histoire */
+.histoire{background:var(--profond);color:var(--papier);padding-block:clamp(90px,12vw,170px)}
+.histoire h2{font-size:clamp(46px,7.4vw,124px);margin-bottom:28px}
+.histoire h2 em{color:var(--chaux)}
+.histoire .intro-h{max-width:56ch;font-size:clamp(17px,1.4vw,20px);line-height:1.6;margin:0 0 clamp(50px,7vw,90px);color:var(--brume)}
+.histoire .intro-h b{color:var(--papier);font-weight:500}
+.frise{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,44px)}
+.frise figure{margin:0 0 18px;aspect-ratio:4/3;overflow:hidden;background:#000}
+.frise img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.frise .an{font-family:var(--f-titre);font-size:clamp(38px,4vw,62px);color:var(--chaux);line-height:1;margin:0 0 10px}
+.frise p{margin:0;color:var(--brume);font-size:16px;max-width:36ch}
+@media (max-width:860px){.frise{grid-template-columns:1fr;gap:54px}}
+
+/* détails */
+.details{padding-block:clamp(88px,11vw,150px) clamp(64px,8vw,110px)}
+.details .tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:clamp(28px,4vw,56px)}
+.details h2{font-size:clamp(46px,7vw,112px)}
+.details h2 em{color:var(--accent)}
+.mosaique{columns:3 300px;column-gap:clamp(10px,1.4vw,20px)}
+.tuile{margin:0 0 clamp(10px,1.4vw,20px);break-inside:avoid;overflow:hidden;background:var(--papier2)}
+.tuile img{width:100%;height:auto}
+@media (max-width:700px){.mosaique{columns:2;column-gap:10px}.tuile{margin-bottom:10px}}
+
+/* le lieu */
+.lieu{padding-block:clamp(88px,11vw,150px);background:var(--papier2)}
+.lieu .grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:start}
+.lieu h2{font-size:clamp(44px,6.6vw,108px);margin-bottom:24px}
+.lieu h2 em{color:var(--accent)}
+.lieu .liste{list-style:none;margin:30px 0 0;padding:0;border-top:1px solid rgba(27,35,33,.22)}
+.lieu .liste li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(27,35,33,.22);font-size:17px}
+.lieu .liste span{opacity:.65;font-size:14px;text-align:right}
+.lieu .cartes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lieu .cartes figure{margin:0;overflow:hidden;aspect-ratio:3/4;position:relative}
+.lieu .cartes figure:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.lieu .cartes img{width:100%;height:100%;object-fit:cover}
+.lieu .cartes figcaption{position:absolute;left:12px;bottom:10px;color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+@media (max-width:860px){.lieu .grille{grid-template-columns:1fr}}
+
+/* réserver */
+.reserver{background:var(--profond);color:var(--papier);padding-block:clamp(90px,12vw,170px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(34px,6vw,96px);align-items:center}
+.reserver h2{font-size:clamp(52px,8.6vw,150px);margin-bottom:28px}
+.reserver h2 em{color:var(--clair)}
+.reserver .actions{display:flex;flex-wrap:wrap;gap:12px}
+.reserver .bouton.ligne{background:transparent;color:var(--papier);border:1px solid rgba(255,255,255,.5)}
+.reserver .coord{margin-top:36px;display:grid;gap:8px}
+.reserver .gros{font-family:var(--f-titre);font-size:clamp(28px,3vw,40px);text-decoration:none;white-space:nowrap}
+.reserver .mail{font-size:17px;color:var(--brume);overflow-wrap:anywhere}
+.reserver .adr{margin:8px 0 0;font-size:14px;color:var(--brume);line-height:1.5}
+.reserver figure{margin:0;aspect-ratio:4/5;overflow:hidden}
+.reserver figure img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.reserver{grid-template-columns:1fr}.reserver figure{aspect-ratio:4/3}}
+
+footer{background:var(--nuit);color:var(--brume);padding-block:56px calc(var(--bas) + 70px);overflow:hidden}
+footer .marque-pied{font-family:var(--f-titre);font-weight:360;letter-spacing:-.03em;font-size:min(15vw,280px);line-height:.85;color:var(--papier);margin:0 0 36px;white-space:nowrap}
+footer .infos{display:flex;flex-wrap:wrap;gap:18px 48px;font-size:13px}
+footer .infos b{display:block;color:var(--papier);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-bottom:4px}
+footer .credit{margin:44px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+footer .credit a{text-decoration:none;border-bottom:1px solid currentColor}
+
+@media (prefers-reduced-motion:reduce){
+  .hero,.fenetre,.bassin{height:auto}
+  .hero .scene,.fenetre .scene,.bassin .scene{position:relative}
+  .fenetre .cadre{clip-path:none}.hero .indice i{animation:none}
+  .hero .fin{opacity:1;visibility:visible}.hero .chap,.hero #nom,.hero #intro{display:none}
+  .lead .mot{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<header class="haut">
+  <a class="marque" href="#haut">Les <b>7</b> Sartots</a>
+  <nav aria-label="Navigation">
+    <a href="#gites">Les gîtes</a>
+    <a href="#piscine">La piscine</a>
+    <a href="#histoire">L'histoire</a>
+    <a href="#alentours">Alentours</a>
+    <a class="cta" href="#reserver">Réserver</a>
+  </nav>
+</header>
+
+<main id="haut">
+
+<section class="hero" id="film" aria-label="Accueil" data-film='{"duree":22.5,"d":{"n":270,"chemin":"hero/frames/f_%04d.jpg","fps":12},"m":{"n":270,"chemin":"hero/frames-m/f_%04d.jpg","fps":12}}'>
+  <div class="scene">
+    <picture>
+      <source media="(orientation:portrait)" srcset="hero/frames-m/f_0001.jpg">
+      <img class="affiche" src="hero/frames/f_0001.jpg" width="1280" height="720" alt="Les 7 Sartots, gîtes en pierre et bois à Saint-Pierre-d'Albigny" fetchpriority="high">
+    </picture>
+    <canvas id="toile" aria-hidden="true"></canvas>
+    <div class="voile"></div>
+    <p class="surt">Gîtes &amp; chambre d'hôtes · Saint-Pierre-d'Albigny · Savoie</p>
+    <h1 id="nom"><span class="ln"><span class="ch">Les</span> <span class="ch"><em>7</em></span></span><span class="ln"><span class="ch">Sartots</span></span></h1>
+    <p class="intro" id="intro">Trois sartôts de vignerons devenus gîtes de charme, une piscine plein sud et toutes les Alpes en face.</p>
+
+    <div class="chap" data-a="0.17" data-b="0.36"><p class="n">01 · Le Pressoir</p><h2>Pierre, chaux <em>&amp; lumière</em></h2><p>Un séjour baigné de soleil, la verrière sur la cuisine, les murs de pierre apparente.</p></div>
+    <div class="chap" data-a="0.39" data-b="0.50"><p class="n">02 · La chambre</p><h2>Le calme <em>du minéral</em></h2><p>Lit queen size, enduits chaux-chanvre, matériaux sains et naturels.</p></div>
+    <div class="chap" data-a="0.52" data-b="0.62"><p class="n">03 · L'hiver</p><h2>Le poêle <em>qui crépite</em></h2></div>
+    <div class="chap" data-a="0.64" data-b="0.74"><p class="n">04 · Dehors</p><h2>La terrasse <em>plein sud</em></h2></div>
+    <div class="chap" data-a="0.76" data-b="0.86"><p class="n">05 · La piscine</p><h2>Face aux <em>Alpes</em></h2></div>
+
+    <div class="fin" id="filmFin">
+      <p class="sur">Les 7 Sartots · Savoie</p>
+      <h2>Votre balcon<br><em>sur les Alpes</em></h2>
+      <a class="bouton" href="#reserver">Réserver votre séjour <span aria-hidden="true">→</span></a>
+    </div>
+    <span class="barre" aria-hidden="true"><i id="filmBarre"></i></span>
+    <div class="indice" aria-hidden="true"><i></i>Faites défiler</div>
+  </div>
+</section>
+
+<section class="bienvenue wrap" aria-label="Bienvenue">
+  <div>
+    <p class="sur">Maison d'hôtes · Combe de Savoie</p>
+    <h2>Bienvenue</h2>
+    <p class="lead" id="lead">Entre Chambéry, Annecy et Albertville, aux portes du Géoparc des Bauges, sept petites maisons de vignerons ont retrouvé une vie. On y vient pour le calme, la piscine plein sud et ce panorama qui change de couleur toute la journée.</p>
+    <div class="chiffres">
+      <div><b>4</b><span>façons de séjourner, du nid pour deux au gîte de 7</span></div>
+      <div><b>2–7</b><span>voyageurs, selon le gîte choisi</span></div>
+      <div><b>Plein sud</b><span>piscine et terrasses face aux montagnes</span></div>
+      <div><b>1955</b><span>le hameau entre dans la famille</span></div>
+    </div>
+  </div>
+  <div class="duo">
+    <figure class="a" data-vitesse="-8"><img src="img/maison.jpg" srcset="img/maison-m.jpg 900w, img/maison.jpg 1067w" sizes="(max-width:860px) 74vw, 38vw" width="1067" height="800" alt="Les gîtes des 7 Sartots, pierre et bois, sous le massif des Bauges" loading="lazy" decoding="async"></figure>
+    <figure class="b" data-vitesse="14"><img src="img/pelouse.jpg" srcset="img/pelouse-m.jpg 900w, img/pelouse.jpg 1500w" sizes="(max-width:860px) 54vw, 28vw" width="1500" height="846" alt="Le jardin et le barbecue devant Le Pressoir, vue sur les montagnes" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="fenetre" aria-label="La vue">
+  <div class="scene">
+    <div class="cadre" id="cadre"><img src="img/panorama.jpg" srcset="img/panorama-m.jpg 900w, img/panorama.jpg 1422w" sizes="100vw" width="1422" height="800" alt="Vue panoramique sur les Alpes et la piscine depuis une terrasse des 7 Sartots" loading="lazy" decoding="async"></div>
+    <div class="txt" id="fenTxt">
+      <p class="sur">La vue</p>
+      <h2>Toute la Combe de Savoie <em>en tableau</em></h2>
+      <p>Depuis la piscine et les terrasses, le regard file jusqu'aux grands massifs.</p>
+      <div class="massifs"><span>Lauzière</span><span>Belledonne</span><span>Chartreuse</span><span>Vercors</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gites" id="gites" aria-label="Les gîtes">
+  <div class="tete wrap">
+    <div><p class="sur">3 hébergements, 4 façons de séjourner</p><h2>Les <em>gîtes</em></h2></div>
+    <p>Bois, métal et enduits à la chaux : chaque sartôt a gardé son caractère. Tous ouvrent sur la piscine de la propriété et la vue sur les Alpes.</p>
+  </div>
+  <div class="defile" id="defile">
+    <div class="scene">
+      <div class="piste" id="piste">
+        <article class="carte">
+          <div class="photos">
+            <figure><img src="img/ecurie-lit.jpg" srcset="img/ecurie-lit-m.jpg 900w" sizes="(max-width:760px) 62vw, 420px" alt="La chambre en mezzanine de L'Écurie, lit 160" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/ecurie-poele-m.jpg" alt="Le poêle à bois de L'Écurie" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/ecurie-terrasse-m.jpg" alt="La terrasse de L'Écurie face aux montagnes" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="ligne"><h3><span class="num">01</span>L'Écurie</h3><span class="tag">2 personnes · 25 m² + 15 m² de terrasse</span></div>
+          <p>Le plus intime. Un nid douillet avec son poêle à bois, une chambre en mezzanine et une grande terrasse privative plein sud, face à la piscine et aux montagnes.</p>
+          <ul><li>Lit 160 × 200</li><li>Poêle à bois</li><li>Terrasse privative</li><li>Dès 75 € la nuit</li></ul>
+        </article>
+        <article class="carte">
+          <div class="photos">
+            <figure><img src="img/pressoir-salon.jpg" srcset="img/pressoir-salon-m.jpg 900w" sizes="(max-width:760px) 62vw, 420px" alt="Le séjour lumineux du Pressoir" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/pressoir-chambre-m.jpg" alt="La chambre du Pressoir, mur de pierre et chaux" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/pressoir-terrasse-m.jpg" alt="La terrasse du Pressoir et ses transats" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="ligne"><h3><span class="num">02</span>Le Pressoir</h3><span class="tag">2 personnes · 35 m² + 15 m² de terrasse</span></div>
+          <p>Le plus minéral. Pierre apparente, enduits chaux-chanvre, ambiance zen et épurée. Le séjour et la terrasse s'ouvrent plein sud sur la piscine et la Combe de Savoie.</p>
+          <ul><li>Lit queen size</li><li>Ouvert sur la piscine</li><li>Barbecue</li></ul>
+        </article>
+        <article class="carte">
+          <div class="photos">
+            <figure><img src="img/guest-salon.jpg" srcset="img/guest-salon-m.jpg 900w" sizes="(max-width:760px) 62vw, 420px" alt="Le salon du Guesthouse et son poêle" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/guest-chambre-m.jpg" alt="La chambre cosy du Guesthouse" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/guest-terrasse-m.jpg" alt="La vaste terrasse du Guesthouse" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="ligne"><h3><span class="num">03</span>Le Guesthouse</h3><span class="tag">2 ou 3 personnes · 55 m² + 30 m² de terrasse</span></div>
+          <p>De l'espace, du cachet et le poêle à bois. Le rez-de-chaussée de Cloudelin, rien que pour vous, avec jardin, transats et vue sur les montagnes.</p>
+          <ul><li>Poêle, bûches fournies</li><li>Jardin</li><li>Cuisine équipée</li></ul>
+        </article>
+        <article class="carte">
+          <div class="photos">
+            <figure><img src="img/cloud-ext.jpg" srcset="img/cloud-ext-m.jpg 900w" sizes="(max-width:760px) 62vw, 420px" alt="Le gîte Cloudelin au pied du massif des Bauges" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/cloud-vie-m.jpg" alt="L'espace de vie de Cloudelin" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/cloud-terrasse-m.jpg" alt="La terrasse de Cloudelin face aux montagnes" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="ligne"><h3><span class="num">04</span>Cloudelin</h3><span class="tag">3 à 7 personnes · 90 m² · 4 chambres</span></div>
+          <p>Le plus grand. Le gîte complet pour les petits groupes : quatre chambres, deux salles de bains, le poêle l'hiver, le barbecue en terrasse l'été, et la fibre pour travailler au calme.</p>
+          <ul><li>4 chambres</li><li>2 salles de bains</li><li>30 m² de terrasse + jardin</li><li>Wifi fibre</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bassin" id="piscine" aria-label="La piscine">
+  <div class="scene">
+    <div class="img" id="bassinImg"><img src="img/piscine.jpg" srcset="img/piscine-m.jpg 900w, img/piscine.jpg 1400w" sizes="100vw" width="1400" height="788" alt="La piscine des 7 Sartots, transats et coquelicots face aux Alpes" loading="lazy" decoding="async"></div>
+    <div class="cap" id="bassinCap">
+      <p class="sur">La piscine</p>
+      <h2>Nager <em>face aux sommets</em></h2>
+      <p>Une piscine plein sud, réservée aux adultes, ouverte de juin à fin septembre. Un transat, un livre, et les Alpes pour horizon.</p>
+    </div>
+  </div>
+</section>
+
+<section class="espe wrap" aria-label="Les terrasses">
+  <div class="espe-txt">
+    <p class="sur">Les terrasses</p>
+    <h2>Dehors, <em>toute la journée</em></h2>
+    <p class="espe-lead">Chaque gîte a sa terrasse, avec transats, parasol et barbecue.</p>
+    <p class="espe-p">Le café du matin au soleil, l'apéritif avec un vin de Savoie quand la lumière tombe sur la Lauzière. Ici, on vit dehors dès les beaux jours.</p>
+    <a class="bouton plein" href="#reserver">Choisir mon gîte <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="espe-img">
+    <figure class="g"><img data-par src="img/guest-vin.jpg" srcset="img/guest-vin-m.jpg 900w, img/guest-vin.jpg 1368w" sizes="(max-width:860px) 100vw, 55vw" alt="Un verre de vin de Savoie sur la terrasse, face à la Lauzière" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/ecurie-terrasse-m.jpg" alt="La terrasse de L'Écurie" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/cloud-terrasse-m.jpg" alt="La terrasse de Cloudelin" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="espe inv wrap" aria-label="L'hiver au coin du feu">
+  <div class="espe-txt">
+    <p class="sur">En toutes saisons</p>
+    <h2>L'hiver, <em>le coin du feu</em></h2>
+    <p class="espe-lead">Les bûches sont fournies : il ne reste qu'à allumer le poêle.</p>
+    <p class="espe-p">Rando ou ski dans les Bauges la journée, plaid et poêle à bois le soir. L'Écurie, le Guesthouse et Cloudelin ont chacun le leur.</p>
+  </div>
+  <div class="espe-img">
+    <figure class="g"><img data-par src="img/cloud-vie.jpg" srcset="img/cloud-vie-m.jpg 900w, img/cloud-vie.jpg 1600w" sizes="(max-width:860px) 100vw, 55vw" alt="L'espace de vie de Cloudelin avec son poêle" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/ecurie-poele-m.jpg" alt="Le poêle à bois de L'Écurie allumé" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/cloud-poele-m.jpg" alt="Le poêle de Cloudelin" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="histoire wrap" id="histoire" aria-label="L'histoire">
+  <p class="sur">L'histoire</p>
+  <h2>Sept sartôts,<br><em>une histoire de vignerons</em></h2>
+  <p class="intro-h">« Sarre-tôt », l'endroit qui sert à tout : le <b>sartôt</b> est la petite maison des vignes, typique de la Combe de Savoie. Ici, cas rare, sept sartôts se regroupent en mini-hameau, où vivaient et travaillaient les vignerons du massif des Bauges.</p>
+  <div class="frise">
+    <div><figure><img src="img/origine.jpg" alt="Les 7 Sartots avant leur rénovation" loading="lazy" decoding="async"></figure><p class="an">1955</p><p>Abandonnés après la Seconde Guerre mondiale, quand la vigne est arrachée, les sartôts deviennent propriété de la famille.</p></div>
+    <div><figure><img src="img/travaux.jpg" alt="Les travaux de rénovation des 7 Sartots" loading="lazy" decoding="async"></figure><p class="an">2017</p><p>Le patrimoine est sauvegardé puis rénové avec AVB Architectes, pierre par pierre, en gîtes et chambre d'hôtes.</p></div>
+    <div><figure><img src="img/chaux.jpg" alt="Application du mélange chaux-chanvre" loading="lazy" decoding="async"></figure><p class="an">Aujourd'hui</p><p>Des matériaux biosourcés et sains, chaux et chanvre, bois et métal. Les 7 Sartots revivent, et vous invitent à partager leur histoire.</p></div>
+  </div>
+</section>
+
+<section class="espe wrap" aria-label="Table d'hôtes">
+  <div class="espe-txt">
+    <p class="sur">Petits déjeuners &amp; table d'hôtes</p>
+    <h2>La Savoie <em>à table</em></h2>
+    <p class="espe-lead">Des produits de saison, locaux et faits maison, servis dans une salle au panorama exceptionnel.</p>
+    <p class="espe-p">Petits déjeuners et table d'hôtes sur réservation, au moins 48 h à l'avance. Et pour la suite, nos adresses de vignerons, de marchés et de restaurants savoyards.</p>
+  </div>
+  <div class="espe-img">
+    <figure class="g"><img data-par src="img/guest-repas.jpg" srcset="img/guest-repas-m.jpg 900w, img/guest-repas.jpg 1200w" sizes="(max-width:860px) 100vw, 55vw" alt="L'espace repas du Guesthouse" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/pressoir-cuisine-m.jpg" alt="La cuisine du Pressoir derrière sa verrière" loading="lazy" decoding="async"></figure>
+    <figure class="p"><img data-par src="img/cloud-cuisine-m.jpg" alt="La cuisine équipée de Cloudelin" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="details wrap" aria-label="Les détails">
+  <div class="tete"><h2>Les <em>détails</em></h2><p class="sur">Bois, métal, pierre et chaux</p></div>
+  <div class="mosaique">
+    <figure class="tuile"><img src="img/porte-m.jpg" alt="Porte massive bois et métal" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/pressoir-mur-m.jpg" alt="Mur de pierres et chaux naturelle, chambre du Pressoir" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/acces-piscine-m.jpg" alt="L'accès à la piscine panoramique" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/pressoir-sdb-m.jpg" alt="Salle de bain du Pressoir, murs de pierres naturelles" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/ecurie-cuisine-m.jpg" alt="L'espace cuisine de L'Écurie et son escalier" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/cote-est-m.jpg" alt="Côté est, le jardin fleuri" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/ecurie-entree-m.jpg" alt="L'entrée de L'Écurie" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/vestibule-m.jpg" alt="Le vestibule d'entrée de Cloudelin" loading="lazy" decoding="async"></figure>
+    <figure class="tuile"><img src="img/piscine2-m.jpg" alt="Vue panoramique depuis la piscine" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="lieu" id="alentours" aria-label="Les alentours">
+  <div class="grille wrap">
+    <div>
+      <p class="sur">Votre camp de base</p>
+      <h2>Au pied <em>des Bauges</em></h2>
+      <p style="font-size:18px;max-width:44ch;margin:0">Randonnées, vélo, via ferrata, châteaux et villes d'art : tout part d'ici. Nos itinéraires, traces GPX et bons plans sont à votre disposition.</p>
+      <ul class="liste">
+        <li>Massif des Bauges, Géoparc mondial UNESCO<span>7 randonnées sélectionnées</span></li>
+        <li>Château de Miolans<span>forteresse historique</span></li>
+        <li>Chambéry<span>vieille ville et château des ducs</span></li>
+        <li>Annecy<span>le tour du lac à vélo</span></li>
+        <li>Les grands cols alpins<span>pour les cyclistes</span></li>
+        <li>Chamonix<span>Mont-Blanc à la journée</span></li>
+      </ul>
+    </div>
+    <div class="cartes">
+      <figure><img src="img/bauges.jpg" srcset="img/bauges-m.jpg 900w, img/bauges.jpg 1500w" sizes="(max-width:860px) 100vw, 45vw" alt="Randonnée dans le massif des Bauges" loading="lazy" decoding="async"><figcaption>Les Bauges</figcaption></figure>
+      <figure><img src="img/miolans-m.jpg" alt="Le château de Miolans" loading="lazy" decoding="async"><figcaption>Miolans</figcaption></figure>
+      <figure><img src="img/annecy-m.jpg" alt="Le lac d'Annecy et le château de Duingt" loading="lazy" decoding="async"><figcaption>Lac d'Annecy</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reserver wrap" id="reserver" aria-label="Réserver">
+  <div>
+    <p class="sur">Les 7 Sartots</p>
+    <h2>Réservez<br><em>en direct</em></h2>
+    <div class="actions">
+      <a class="bouton" href="tel:+33651593298">Appeler <span aria-hidden="true">→</span></a>
+      <a class="bouton ligne" href="mailto:les7sartots@gmail.com?subject=R%C3%A9servation%20aux%207%20Sartots">Écrire un mail</a>
+    </div>
+    <div class="coord">
+      <a class="gros" href="tel:+33651593298">06 51 59 32 98</a>
+      <a class="mail" href="mailto:les7sartots@gmail.com">les7sartots@gmail.com</a>
+      <p class="adr">2230 route du Col du Frêne, La Plantaz<br>73250 Saint-Pierre-d'Albigny, Savoie<br>Arrivée de 16 h à 19 h</p>
+    </div>
+  </div>
+  <figure><img src="img/acces-piscine.jpg" srcset="img/acces-piscine-m.jpg 900w, img/acces-piscine.jpg 933w" sizes="(max-width:860px) 92vw, 40vw" alt="Le chemin vers la piscine face aux Alpes" loading="lazy" decoding="async"></figure>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p class="marque-pied" aria-hidden="true">Les 7 Sartots</p>
+  <div class="infos"><div><b>Où</b>Saint-Pierre-d'Albigny, Savoie</div><div><b>Gîtes</b>L'Écurie · Le Pressoir · Le Guesthouse · Cloudelin</div><div><b>Contact</b>06 51 59 32 98</div></div>
+  <p class="credit">Site créé par <a href="https://immerweb.com" rel="noopener">Immerweb</a></p>
+</footer>
+
+<div class="apercu" aria-hidden="true">Aperçu préparé pour Les 7 Sartots</div>
+
+<script src="assets/film.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!window.gsap || !window.ScrollTrigger || calme) { document.querySelectorAll('.lead .mot').forEach(function(m){m.style.opacity=1}); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  var mobile = window.matchMedia('(max-width:760px)').matches;
+
+  // entrée du titre
+  gsap.from('#nom .ch', {yPercent:115, rotate:3, duration:1.4, ease:'power4.out', stagger:.08, delay:.15});
+  // le titre s'efface quand le film démarre
+  gsap.timeline({scrollTrigger:{trigger:'#film', start:'top top', end:'+=' + innerHeight * 1.1, scrub:.6}})
+    .to('#nom', {yPercent:-30, autoAlpha:0, ease:'none'}, 0)
+    .to('#intro, .hero .surt, .hero .indice', {autoAlpha:0, y:-20, ease:'none'}, 0);
+
+  // texte de bienvenue : les mots s'allument au défilement
+  var lead = document.getElementById('lead');
+  lead.innerHTML = lead.textContent.split(' ').map(function(w){return '<span class="mot">'+w+'</span>'}).join(' ');
+  gsap.to('#lead .mot', {opacity:1, stagger:.05, ease:'none', scrollTrigger:{trigger:'#lead', start:'top 80%', end:'bottom 45%', scrub:true}});
+  gsap.from('.bienvenue h2, .bienvenue .sur, .chiffres > div', {y:40, autoAlpha:0, duration:1.1, stagger:.1, ease:'power3.out', scrollTrigger:{trigger:'.bienvenue', start:'top 75%'}});
+  gsap.utils.toArray('.duo figure').forEach(function(f){
+    var v = parseFloat(f.dataset.vitesse) || 0;
+    gsap.fromTo(f, {yPercent:-v/2}, {yPercent:v, ease:'none', scrollTrigger:{trigger:'.duo', start:'top bottom', end:'bottom top', scrub:true}});
+  });
+
+  // la fenêtre s'ouvre sur les Alpes
+  gsap.timeline({scrollTrigger:{trigger:'.fenetre', start:'top top', end:'bottom bottom', scrub:.8}})
+    .to('#cadre', {clipPath:'inset(0% 0% 0% 0% round 0px)', ease:'power1.inOut', duration:1}, 0)
+    .to('#cadre img', {scale:1, ease:'none', duration:1.4}, 0)
+    .from('#fenTxt > *', {y:40, autoAlpha:0, stagger:.1, duration:.5}, .35);
+
+  // les gîtes défilent à l'horizontale
+  if (!mobile) {
+    var piste = document.getElementById('piste'), defile = document.getElementById('defile');
+    var dist = function(){ return piste.scrollWidth - innerWidth; };
+    defile.style.height = (innerHeight + dist()) + 'px';
+    gsap.to(piste, {x:function(){return -dist()}, ease:'none', scrollTrigger:{trigger:defile, start:'top top', end:function(){return '+=' + dist()}, scrub:.6, invalidateOnRefresh:true, onRefresh:function(){defile.style.height = (innerHeight + dist()) + 'px'}}});
+  } else {
+    gsap.utils.toArray('.carte').forEach(function(c){ gsap.from(c, {y:60, autoAlpha:0, duration:1, ease:'power3.out', scrollTrigger:{trigger:c, start:'top 85%'}}); });
+  }
+
+  // la piscine : zoom arrière lent
+  gsap.timeline({scrollTrigger:{trigger:'.bassin', start:'top top', end:'bottom bottom', scrub:.8}})
+    .fromTo('#bassinImg', {scale:1.35}, {scale:1, ease:'none', duration:1}, 0)
+    .from('#bassinCap > *', {y:50, autoAlpha:0, stagger:.08, duration:.35}, .25);
+
+  // parallaxe des photos
+  gsap.utils.toArray('[data-par]').forEach(function(im){
+    gsap.fromTo(im, {yPercent:-8}, {yPercent:0, ease:'none', scrollTrigger:{trigger:im.parentNode, start:'top bottom', end:'bottom top', scrub:true}});
+  });
+  gsap.utils.toArray('.espe-txt > *, .histoire h2, .histoire .intro-h, .frise > div, .details h2, .lieu h2, .lieu .liste li, .reserver h2, .reserver .actions').forEach(function(el){
+    gsap.from(el, {y:36, autoAlpha:0, duration:1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%'}});
+  });
+  gsap.utils.toArray('.tuile').forEach(function(t, i){
+    gsap.from(t, {y:70, autoAlpha:0, duration:1.1, ease:'power3.out', delay:(i % 3) * .08, scrollTrigger:{trigger:t, start:'top 92%'}});
+  });
+})();
+</script>
+</body>
+</html>
